@@ -21,6 +21,10 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 
+Route::get('/forget', function () {
+    return view('auth.forget');
+})->name('forget');
+
 Route::get('/home', function () {
     return view('admin.pages.dashboard');
 });

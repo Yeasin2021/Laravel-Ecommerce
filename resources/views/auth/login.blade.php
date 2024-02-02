@@ -45,7 +45,7 @@
                                 <input type="checkbox"> Remember Me
                             </label>
                                     <label class="pull-right">
-                                <a href="#">Forgotten Password?</a>
+                                <a href="{{ route('forget') }}">Forgotten Password?</a>
                             </label>
 
                                 </div>

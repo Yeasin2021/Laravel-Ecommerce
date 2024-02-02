@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FeatureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +28,11 @@ Route::get('/forget', function () {
 
 Route::get('/home', function () {
     return view('admin.pages.dashboard');
-});
+})->name('home');
 
 
 Route::get('/single-feature', function () {
     return view('admin.pages.form.single-feature');
-});
+})->name('feature');
+
+Route::post('/single-feature-post', [FeatureController::class,'store'])->name('feature-post');

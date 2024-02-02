@@ -28,3 +28,8 @@ Route::get('/forget', function () {
 Route::get('/home', function () {
     return view('admin.pages.dashboard');
 });
+
+
+Route::get('/single-feature', function () {
+    return view('admin.pages.form.single-feature');
+});

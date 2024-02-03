@@ -13,6 +13,7 @@
     <script src="{{ asset('panel') }}/vendors/jqvmap/dist/jquery.vmap.min.js"></script>
     <script src="{{ asset('panel') }}/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
     <script src="{{ asset('panel') }}/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+
     <script>
         (function($) {
             "use strict";
@@ -31,3 +32,4 @@
             });
         })(jQuery);
     </script>
+     @stack('js')

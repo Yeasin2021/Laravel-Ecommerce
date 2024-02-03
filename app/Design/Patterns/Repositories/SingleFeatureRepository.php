@@ -6,7 +6,12 @@ use App\Models\Feature;
 
 class SingleFeatureRepository implements SingleFeatureInterface
 {
-    public function add(array $data)
+    public function read()
+    {
+        return  Feature::all();
+    }
+
+    public function create(array $data)
     {
         return  Feature::create($data);
     }

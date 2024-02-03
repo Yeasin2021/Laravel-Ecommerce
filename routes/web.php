@@ -36,3 +36,4 @@ Route::get('/single-feature', function () {
 })->name('feature');
 
 Route::post('/single-feature-post', [FeatureController::class,'store'])->name('feature-post');
+Route::get('/single-feature-data', [FeatureController::class,'show'])->name('feature-data');

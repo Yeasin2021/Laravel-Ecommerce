@@ -47,7 +47,7 @@ class FeatureController extends Controller
 
        try{
         $inputs = $request->all();
-        $this->interface->add($inputs);
+        $this->interface->create($inputs);
         toastr()->success(" Successfully Feature Added ");
         return redirect()->route('home');
 
@@ -57,6 +57,12 @@ class FeatureController extends Controller
         return redirect()->back();
         }
 
+    }
+
+    public function show()
+    {
+        $items = $this->interface->read();
+        return view('admin.pages.table.single-feature',['items'=>$items]);
     }
 
 

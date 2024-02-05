@@ -32,7 +32,7 @@
                                         <td>{{ $item->title }}</td>
                                         <td>{{ $item->description }}</td>
                                         <td style="text-align: center">
-                                            <a href=""><i class="ti-pencil-alt" style="color: rgb(68, 255, 0);font-size:30px;"></i></a>
+                                            <a href="{{ route('feature-edit-data',$item->id) }}"><i class="ti-pencil-alt" style="color: rgb(68, 255, 0);font-size:30px;"></i></a>
                                             <a href=""><i class="ti-trash" style="color: red; font-size:30px;"></i></a>
                                         </td>
                                     </tr>

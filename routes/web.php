@@ -37,5 +37,6 @@ Route::get('/single-feature', function () {
 
 Route::post('/single-feature-post', [FeatureController::class,'store'])->name('feature-post');
 Route::get('/single-feature-data', [FeatureController::class,'show'])->name('feature-data');
-Route::get('/single-feature-edit/{id}', [FeatureController::class,'editForm'])->name('feature-edit-data');
+Route::get('/single-feature-edit-data/{id}', [FeatureController::class,'editForm'])->name('feature-edit-data');
+Route::post('/single-feature-update-data/{id}', [FeatureController::class,'update'])->name('feature-update-data');
 

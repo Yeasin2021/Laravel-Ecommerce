@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header"><strong>Single Feature Edit </strong> Form</div>
                     <div class="card-body card-block">
-                        <form action="{{ route('feature-post') }}" method="post" class="form-horizontal">
+                        <form action="{{ route('feature-update-data',$item->id) }}" method="post" class="form-horizontal">
                             @csrf
                             <div class="row form-group">
                                 <div class="col col-md-3"><label for="hf-email" class="form-control-label">Icon</label></div>

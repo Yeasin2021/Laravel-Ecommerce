@@ -67,9 +67,43 @@ class FeatureController extends Controller
 
     public function editForm($id)
     {
-        // dd('ok');
         $item = $this->interface->edit($id);
         return view('admin.pages.form.single-feature-edit',['item'=>$item]);
+    }
+
+    public function update(Request $request,$id)
+    {
+        $validator = Validator::make($request->all(), [
+            'icon' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+
+        ]);
+
+        if ($validator->fails()) {
+
+           $messages = $validator->messages();
+
+                foreach ($messages->all() as $message)
+                {
+                    toastr()->error ( $message, 'Error');
+                }
+
+             return redirect()->back()->withInput();
+       }
+
+       try{
+        $inputs = $request->all();
+        $this->interface->update($inputs,$id);
+        toastr()->success("Successfully Feature Updated ");
+        return redirect()->route('home');
+
+        }
+        catch(Exception $error){
+        toastr()->error($error->getMessage());
+        return redirect()->back();
+        }
+
     }
 
 

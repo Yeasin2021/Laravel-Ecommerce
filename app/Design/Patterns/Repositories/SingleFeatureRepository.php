@@ -21,6 +21,12 @@ class SingleFeatureRepository implements SingleFeatureInterface
         return Feature::find($id);
     }
 
+    public function update(array $data ,$id)
+    {
+        $update =  Feature::find($id);
+        return $update->update($data);
+    }
+
 }
 
 ?>

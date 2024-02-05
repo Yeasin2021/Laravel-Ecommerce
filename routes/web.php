@@ -39,4 +39,5 @@ Route::post('/single-feature-post', [FeatureController::class,'store'])->name('f
 Route::get('/single-feature-data', [FeatureController::class,'show'])->name('feature-data');
 Route::get('/single-feature-edit-data/{id}', [FeatureController::class,'editForm'])->name('feature-edit-data');
 Route::post('/single-feature-update-data/{id}', [FeatureController::class,'update'])->name('feature-update-data');
+Route::any('/single-feature-delete-data/{id}', [FeatureController::class,'delete'])->name('feature-delete-data');
 

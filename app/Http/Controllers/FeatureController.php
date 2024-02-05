@@ -106,6 +106,12 @@ class FeatureController extends Controller
 
     }
 
+    public function delete($id)
+    {
+        $this->interface->delete($id);
+        return redirect()->route('home');
+    }
+
 
 
 }

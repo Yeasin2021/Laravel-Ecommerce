@@ -27,6 +27,12 @@ class SingleFeatureRepository implements SingleFeatureInterface
         return $update->update($data);
     }
 
+    public function delete($id)
+    {
+        $delete = Feature::find($id);
+        return $delete->delete();
+    }
+
 }
 
 ?>

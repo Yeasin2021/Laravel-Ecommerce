@@ -16,6 +16,11 @@ class SingleFeatureRepository implements SingleFeatureInterface
         return  Feature::create($data);
     }
 
+    public function edit($id)
+    {
+        return Feature::find($id);
+    }
+
 }
 
 ?>

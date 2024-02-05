@@ -65,6 +65,13 @@ class FeatureController extends Controller
         return view('admin.pages.table.single-feature',['items'=>$items]);
     }
 
+    public function editForm($id)
+    {
+        // dd('ok');
+        $item = $this->interface->edit($id);
+        return view('admin.pages.form.single-feature-edit',['item'=>$item]);
+    }
+
 
 
 }
